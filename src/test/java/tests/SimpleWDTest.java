@@ -1,8 +1,8 @@
 package tests;
 
-import Factory.AdvancedDriver;
-import Factory.BrowserFactory;
-import Factory.SimpleDriver;
+import factory.AdvancedDriver;
+import factory.BrowserFactory;
+import factory.SimpleDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 

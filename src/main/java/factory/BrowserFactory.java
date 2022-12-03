@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import configuration.ReadProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
