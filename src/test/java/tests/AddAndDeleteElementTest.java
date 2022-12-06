@@ -23,7 +23,8 @@ public class AddAndDeleteElementTest {
     public void AddAndDeleteElementsTest() throws InterruptedException {
         int count = 0;
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Add Element']")));
+        System.out.println();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='Add Element']")));
         WebElement addButton = driver.findElement(By.xpath("//button[text()='Add Element']"));
         actions.doubleClick(addButton).perform();
         actions.doubleClick(addButton).perform();
