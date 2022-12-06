@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b04bf1b-b5e6-4b74-815b-bf830be23afe" name="Changes" comment="Smoke tests">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Selenium_WD_Homework" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IQP8fFjlqrtypU1IgWkpnlVPON" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andro/IdeaProjects/AutomatedTesting/src/test/resources&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\andro\IdeaProjects\AutomatedTesting\src\test\resources" />
+      <recent name="C:\Users\andro\IdeaProjects\AutomatedTesting\src\test\java" />
+      <recent name="C:\Users\andro\IdeaProjects\AutomatedTesting\src\test\java\tests" />
+      <recent name="C:\Users\andro\IdeaProjects\AutomatedTesting\src\main\java" />
+      <recent name="C:\Users\andro\IdeaProjects\AutomatedTesting\src\test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests.data" />
+      <recent name="tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.SmokeTest.validateSKFTest">
+    <configuration name="C:/Users/andro/IdeaProjects/AutomatedTesting/src/test/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTesting" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleWDTest.browserFactoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SimpleWDTest" />
+      <option name="METHOD_NAME" value="browserFactoryTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmokeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SmokeTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmokeTest.validateIKTCalculator" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SmokeTest" />
+      <option name="METHOD_NAME" value="validateIKTCalculator" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmokeTest.validateSKFTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SmokeTest" />
+      <option name="METHOD_NAME" value="validateSKFTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.SmokeTest.validateSKFTest" />
+        <item itemvalue="TestNG.C:/Users/andro/IdeaProjects/AutomatedTesting/src/test/resources/testng.xml" />
+        <item itemvalue="TestNG.SmokeTest" />
+        <item itemvalue="TestNG.SmokeTest.validateIKTCalculator" />
+        <item itemvalue="TestNG.SimpleWDTest.browserFactoryTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b04bf1b-b5e6-4b74-815b-bf830be23afe" name="Changes" comment="" />
+      <created>1670110677215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670110677215</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1670110830728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670110830728</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1670111306172</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670111306172</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1670111380175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670111380175</updated>
+    </task>
+    <task id="LOCAL-00004" summary="initial commit">
+      <created>1670111761590</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670111761590</updated>
+    </task>
+    <task id="LOCAL-00005" summary="initial commit">
+      <created>1670112084189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670112084189</updated>
+    </task>
+    <task id="LOCAL-00006" summary="initial commit">
+      <created>1670117277481</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670117277481</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add and Delete element tests">
+      <created>1670117660824</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670117660824</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add and Delete element tests">
+      <created>1670119528707</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670119528707</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add and Delete element tests">
+      <created>1670343365482</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670343365482</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Smoke tests">
+      <created>1670351543010</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670351543010</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="TestNG" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Add and Delete element tests" />
+    <MESSAGE value="Smoke tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Smoke tests" />
+  </component>
+</project>
