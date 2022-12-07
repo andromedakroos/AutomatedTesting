@@ -57,8 +57,6 @@ public class LaminateCalculatorTest {
         WebElement countOfLaminatPacks =  driver.findElement(By.xpath("//*[@id=\"t3-content\"]/div[3]/article/section/div[2]/div[3]/div[2]/div[2]/span"));
         Assert.assertEquals(countOfLaminatPacks.getText(),"7");
 
-
-
     }
 
     @AfterMethod
