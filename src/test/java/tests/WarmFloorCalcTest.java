@@ -37,14 +37,11 @@ public class WarmFloorCalcTest {
         driver.findElement(By.id("el_f_losses")).sendKeys("2141");
         driver.findElement(By.cssSelector("[name='button']")).click();
 
-//        Assert.assertEquals(driver.findElement(By.id("floor_cable_power")).getText(),
-//                "1191");
-//
-//        Assert.assertEquals(driver.findElement(By.id("spec_floor_cable_power")).getText(),
-//                "60");
+        Assert.assertEquals(driver.findElement(By.id("floor_cable_power")).getAttribute("value"),
+                "1191");
 
-        System.out.println(driver.findElement(By.id("floor_cable_power")).getText());
-
+        Assert.assertEquals(driver.findElement(By.id("spec_floor_cable_power")).getAttribute("value"),
+                "60");
     }
 
     @AfterMethod
