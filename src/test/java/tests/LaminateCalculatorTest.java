@@ -51,10 +51,10 @@ public class LaminateCalculatorTest {
 
         driver.findElement(By.className("mfp-close")).click();
 
-       WebElement countOfPlanks =  driver.findElement(By.xpath("//*[@id=\"t3-content\"]/div[3]/article/section/div[2]/div[3]/div[2]/div[1]/span"));
+        WebElement countOfPlanks = driver.findElement(By.xpath("//*[@style = 'padding:5px 0;font-size:22px; color:#C80303; font-weight:bold;']"));
         Assert.assertEquals(countOfPlanks.getText(),"51");
 
-        WebElement countOfLaminatPacks =  driver.findElement(By.xpath("//*[@id=\"t3-content\"]/div[3]/article/section/div[2]/div[3]/div[2]/div[2]/span"));
+        WebElement countOfLaminatPacks =  driver.findElement(By.xpath("//*[@style = 'padding:5px 0;font-size:18px; color:#0E8C19; font-weight:bold;']"));
         Assert.assertEquals(countOfLaminatPacks.getText(),"7");
 
     }
@@ -62,6 +62,6 @@ public class LaminateCalculatorTest {
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(5000);
-        driver.quit();
+//        driver.quit();
     }
 }
