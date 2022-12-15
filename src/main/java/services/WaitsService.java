@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class WaitsService {
     private WebDriver driver;
@@ -32,6 +33,14 @@ public class WaitsService {
 
     public boolean waitForElementInvisible(WebElement webElement){
         return wait.until(ExpectedConditions.invisibilityOf(webElement));
+    }
+
+    public List<WebElement> waitForAllVisibleElementsLocatedBy(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+    }
+
+    public WebElement waitForExists(By locator) {
+        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     public WebElement fluentWaitForElement(By by){
