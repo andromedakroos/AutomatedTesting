@@ -16,11 +16,11 @@ import pages.LoginPage;
 
 public class LogInTest extends BaseTest {
 
-    @Test
+//    @Test
     public void loginSuccessfulTest(){
         Assert.assertTrue(userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password()).isPageOpened());
     }
-    @Test
+//    @Test
     public void loginIncorrectTest(){
         Assert.assertEquals(userStep.loginIncorrect(ReadProperties.username(), "123213")
                 .getErrorTextElement().getText(),
