@@ -5,10 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CheckoutStepTwoPage extends BasePage {
+public class CheckoutOverview extends BasePage {
     private final By finishButtonLocator = By.id("finish");
 
-    public CheckoutStepTwoPage(WebDriver driver) {
+    public CheckoutOverview(WebDriver driver) {
         super(driver);
     }
 

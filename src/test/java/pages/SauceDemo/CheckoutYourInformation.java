@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CheckoutStepOnePage extends BasePage {
+public class CheckoutYourInformation extends BasePage {
     private final By continueButtonLocator = By.id("continue");
     private final By firstNameInputLocator = By.id("first-name");
     private final By lastNameInputLocator = By.id("last-name");
@@ -13,7 +13,7 @@ public class CheckoutStepOnePage extends BasePage {
 
 
 
-    public CheckoutStepOnePage(WebDriver driver) {
+    public CheckoutYourInformation(WebDriver driver) {
         super(driver);
     }
 
