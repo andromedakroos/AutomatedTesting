@@ -3,6 +3,10 @@
 <suite name="Main Suite">
     <parameter name="login-value" value="user_1"></parameter>
     <parameter name="psw-value" value="qwertyu"></parameter>
+    <parameter name="firstNum" value="44"></parameter>
+    <parameter name="secondNum" value="22"></parameter>
+
+
     <test name="Smoke">
         <classes>
             <class name="tests.CalculatorTest">
