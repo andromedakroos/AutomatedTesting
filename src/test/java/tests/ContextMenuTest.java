@@ -8,11 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ContextMenuTest extends BaseTest {
-    private Actions actions = new Actions(driver);
-
     @Test
     public void contextMenuTest(){
         driver.get("http://the-internet.herokuapp.com/context_menu");
+        Actions actions = new Actions(driver);
         actions.
                 contextClick(waitsService.waitForVisibilityBy(By.id("hot-spot")))
                 .build()
