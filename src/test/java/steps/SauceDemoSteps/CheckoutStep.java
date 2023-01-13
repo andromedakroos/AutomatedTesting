@@ -1,6 +1,7 @@
 package steps.SauceDemoSteps;
 
 import baseEntities.BaseStep;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import pages.SauceDemo.*;
 
@@ -14,7 +15,6 @@ public class CheckoutStep extends BaseStep {
         checkoutOverview = new CheckoutOverview(driver);
         finishPage = new FinishPage(driver);
     }
-
     public void checkoutYourInformation(String firstName, String lastName, String zipCode){
         checkoutYourInformation.getFirstNameLocator().sendKeys(firstName);
         checkoutYourInformation.getLastNameLocator().sendKeys(lastName);
@@ -27,6 +27,7 @@ public class CheckoutStep extends BaseStep {
         finishPage.isPageOpened();
         finishPage.getFinishLogoLocator().isDisplayed();
     }
+    @Step
     public FinishPage checkout(String firstName, String lastName, String zipCode){
         checkoutYourInformation(firstName,lastName,zipCode);
         checkoutOverview();

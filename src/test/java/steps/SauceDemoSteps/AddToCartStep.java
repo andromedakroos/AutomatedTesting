@@ -1,6 +1,7 @@
 package steps.SauceDemoSteps;
 
 import baseEntities.BaseStep;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import pages.SauceDemo.CartPage;
 import pages.SauceDemo.CheckoutYourInformation;
@@ -17,6 +18,7 @@ public class AddToCartStep extends BaseStep {
         cartPage = new CartPage(driver);
         checkoutYourInformation = new CheckoutYourInformation(driver);
     }
+    @Step
     public void addAndGoToCheckout(){
         inventoryPage.getAddToCartButtonLocator().click();
         inventoryPage.getCartButtonLocator().click();
