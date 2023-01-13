@@ -1,7 +1,7 @@
 package baseEntities;
 
 import org.openqa.selenium.WebDriver;
-import steps.UserStep;
+
 
 public class BaseStep {
     protected WebDriver driver;

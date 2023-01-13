@@ -13,5 +13,4 @@ public class FramesTest extends BaseTest {
         driver.switchTo().frame("mce_0_ifr");
         Assert.assertEquals(driver.findElement(By.tagName("p")).getText().trim(), "Your content goes here.");
     }
-
 }
