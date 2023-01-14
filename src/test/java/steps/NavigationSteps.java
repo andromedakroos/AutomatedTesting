@@ -13,7 +13,6 @@ public class NavigationSteps extends BaseStep {
 
         AddProjectPage page = new AddProjectPage(driver);
         page.openPageByUrl();
-
         return page;
     }
 }
