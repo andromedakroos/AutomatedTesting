@@ -12,10 +12,6 @@ public class DashBoardPage extends BasePage {
         super(driver);
         openPageByUrl();
     }
-    @Override
-    protected By getPageIdentifier() {
-        return headerTittleLabelLocator;
-    }
     public void openPageByUrl(){
         super.openPageByUrl(pagePath);
     }

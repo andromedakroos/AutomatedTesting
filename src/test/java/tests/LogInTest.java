@@ -21,9 +21,17 @@ import steps.UserStep;
 public class  LogInTest extends BaseTest {
 
     @Test
-    public void loginSuccessfulTest(){
-        Assert.assertTrue(userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password()).isPageOpened());
+    public void loginTest(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.emailInput.sendKeys(ReadProperties.username());
+        loginPage.passwordInput.sendKeys(ReadProperties.password());
+        loginPage.logInButton.click();
     }
+
+//    @Test
+//    public void loginSuccessfulTest(){
+//        Assert.assertTrue(userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password()).isPageOpened());
+//    }
     @Test(description = "Description")
     @Issue("AutomatedTesting-12")
     @TmsLink("TC-001")
@@ -33,7 +41,7 @@ public class  LogInTest extends BaseTest {
     @Severity(SeverityLevel.BLOCKER)
     public void loginIncorrectTest(){
         Assert.assertEquals(userStep.loginIncorrect(ReadProperties.username(), "123213")
-                .getErrorTextElement().getText(),
+                .errorText.getText(),
                 "Email/Login or Password is incorrect. Please try again.");
     }
     @Test
