@@ -6,6 +6,7 @@ import configuration.ReadProperties;
 import factory.BrowserFactory;
 import io.qameta.allure.*;
 import models.Project;
+import models.User;
 import org.bouncycastle.dvcs.DVCSRequestInfo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +24,11 @@ public class  LogInTest extends BaseTest {
 
     @Test
     public void loginSuccessfulTest(){
-        Assert.assertTrue(userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password()).isPageOpened());
+        User user = new User.Builder()
+                .withEmail(ReadProperties.username())
+                .withPassword(ReadProperties.password())
+                .build();
+        Assert.assertTrue(userStep.loginSuccessful(user).isPageOpened());
     }
     @Test(description = "Description")
     @Issue("AutomatedTesting-12")
