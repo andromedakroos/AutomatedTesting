@@ -15,6 +15,6 @@ public class DownloadFileTest extends BaseTest {
         WebElement file = waitsService.waitForVisibilityBy(By.linkText("LambdaTest.txt"));
         file.click();
         String fileName = file.getText();
-        Assert.assertTrue(waitsService.isFileExist("C:\\Users\\andro\\downloads\\" + fileName));
+        Assert.assertTrue(waitsService.isFileExist(System.getProperty("user.dir") + File.separator+ fileName));
     }
 }
