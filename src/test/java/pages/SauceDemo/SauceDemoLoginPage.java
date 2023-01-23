@@ -21,7 +21,6 @@ public class SauceDemoLoginPage extends BasePage {
         return logInButtonLocator;
     }
 
-
     public void openPageByUrl() {
         super.openPageByUrl(pagePath);
     }

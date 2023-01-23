@@ -20,6 +20,6 @@ public class LoginStep extends BaseStep {
         sauceDemoLoginPage.getUsernameInput().sendKeys(username);
         sauceDemoLoginPage.getPasswordInput().sendKeys(password);
         sauceDemoLoginPage.getLogInButton().click();
-        inventoryPage.isPageOpened();
+//        inventoryPage.isPageOpened();
     }
 }

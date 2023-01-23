@@ -9,13 +9,11 @@ import org.testng.annotations.Listeners;
 import steps.SauceDemoSteps.AddToCartStep;
 import steps.SauceDemoSteps.CheckoutStep;
 import steps.SauceDemoSteps.LoginStep;
-import steps.UserStep;
 import utils.InvokedListener;
 
 @Listeners(InvokedListener.class)
 public class BaseTest {
     protected WebDriver driver;
-    protected UserStep userStep;
     protected LoginStep loginStep;
     protected AddToCartStep addToCartStep;
     protected CheckoutStep checkoutStep;
@@ -23,7 +21,6 @@ public class BaseTest {
     @BeforeMethod
     public void setUp(ITestContext iTestContext){
         driver = new BrowserFactory().getDriver();
-        userStep = new UserStep(driver);
         loginStep = new LoginStep(driver);
         addToCartStep = new AddToCartStep(driver);
         checkoutStep = new CheckoutStep(driver);

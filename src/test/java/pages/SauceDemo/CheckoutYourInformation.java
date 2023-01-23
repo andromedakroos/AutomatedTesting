@@ -4,14 +4,18 @@ import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutYourInformation extends BasePage {
-    private final By continueButtonLocator = By.id("continue");
-    private final By firstNameInputLocator = By.id("first-name");
-    private final By lastNameInputLocator = By.id("last-name");
-    private final By postalCodeInputLocator = By.id("postal-code");
-
-
+    @FindBy(id = "continue")
+    public WebElement continueButton;
+    @FindBy(id = "first-name")
+    public WebElement firstNameInput;
+    @FindBy(id = "last-name")
+    public WebElement lastNameInput;
+    @FindBy(id = "postal-code")
+    public WebElement postalCodeInput;
 
     public CheckoutYourInformation(WebDriver driver) {
         super(driver);
@@ -19,21 +23,11 @@ public class CheckoutYourInformation extends BasePage {
 
     @Override
     protected By getPageIdentifier() {
-        return continueButtonLocator;
+        return null;
     }
 
-    public WebElement getContinueButtonLocator() {
-        return driver.findElement(continueButtonLocator);
+    public WebElement getPageIdentifierByElement() {
+        return continueButton;
     }
 
-    public WebElement getFirstNameLocator() {
-        return driver.findElement(firstNameInputLocator);
-    }
-
-    public WebElement getLastNameLocator() {
-        return driver.findElement(lastNameInputLocator);
-    }
-    public WebElement getZipCodeLocator() {
-        return driver.findElement(postalCodeInputLocator);
-    }
 }

@@ -2,6 +2,7 @@ package tests;
 
 import baseEntities.BaseTest;
 import io.qameta.allure.Attachment;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SauceDemoTest extends BaseTest {
@@ -9,8 +10,8 @@ public class SauceDemoTest extends BaseTest {
     public void sauceDemoE2ETest(){
         loginStep.login("standard_user","secret_sauce");
         addToCartStep.addAndGoToCheckout();
-        checkoutStep.checkout("Andrew",
-                "Moroz", "30-605").isPageOpened();
+        Assert.assertTrue(checkoutStep.checkout("Andrew",
+                "Moroz", "30-605").isFinishPageOpened());
     }
     @Test(description = "Sauce demo failed test")
     @Attachment(value = "screenshot", type = "image/png")

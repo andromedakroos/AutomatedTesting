@@ -16,16 +16,15 @@ public class CheckoutStep extends BaseStep {
         finishPage = new FinishPage(driver);
     }
     public void checkoutYourInformation(String firstName, String lastName, String zipCode){
-        checkoutYourInformation.getFirstNameLocator().sendKeys(firstName);
-        checkoutYourInformation.getLastNameLocator().sendKeys(lastName);
-        checkoutYourInformation.getZipCodeLocator().sendKeys(zipCode);
-        checkoutYourInformation.getContinueButtonLocator().click();
+        checkoutYourInformation.firstNameInput.sendKeys(firstName);
+        checkoutYourInformation.lastNameInput.sendKeys(lastName);
+        checkoutYourInformation.postalCodeInput.sendKeys(zipCode);
+        checkoutYourInformation.continueButton.click();
         checkoutOverview.isPageOpened();
     }
     public void checkoutOverview(){
         checkoutOverview.getFinishButtonLocator().click();
-        finishPage.isPageOpened();
-        finishPage.getFinishLogoLocator().isDisplayed();
+        finishPage.isFinishPageOpened();
     }
     @Step
     public FinishPage checkout(String firstName, String lastName, String zipCode){
