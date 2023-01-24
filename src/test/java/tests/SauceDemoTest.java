@@ -7,8 +7,15 @@ import org.testng.annotations.Test;
 
 public class SauceDemoTest extends BaseTest {
     @Test(description = "Sauce demo end 2 end test")
+//    public void sauceDemoE2ETest(){
+//        loginStep.login("standard_user","secret_sauce");
+//        addToCartStep.addAndGoToCheckout();
+//        Assert.assertTrue(checkoutStep.checkout("Andrew",
+//                "Moroz", "30-605").isFinishPageOpened());
+//    }
     public void sauceDemoE2ETest(){
-        loginStep.login("standard_user","secret_sauce");
+        loginStep.login("standard_user","secret_sauce")
+                .;
         addToCartStep.addAndGoToCheckout();
         Assert.assertTrue(checkoutStep.checkout("Andrew",
                 "Moroz", "30-605").isFinishPageOpened());

@@ -16,10 +16,11 @@ public class LoginStep extends BaseStep {
         inventoryPage = new InventoryPage(driver);
     }
     @Step
-    public void login(String username, String password){
+    public InventoryPage login(String username, String password){
         sauceDemoLoginPage.getUsernameInput().sendKeys(username);
         sauceDemoLoginPage.getPasswordInput().sendKeys(password);
         sauceDemoLoginPage.getLogInButton().click();
-//        inventoryPage.isPageOpened();
+        inventoryPage.isPageOpened();
+        return inventoryPage;
     }
 }
