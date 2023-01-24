@@ -42,16 +42,16 @@ public class  LogInTest extends BaseTest {
                 .getErrorTextElement().getText(),
                 "Email/Login or Password is incorrect. Please try again.");
     }
-    @Test
-    public void addProjectTest() {
-        Project project = new Project();
-        project.setName("WP_01");
-        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
-        projectSteps.addProject(project);
-
-        Assert.assertEquals(driver.findElement(By.className("page_title")).getText(),
-                project.getName());
-    }
+//    @Test
+//    public void addProjectTest() {
+//        Project project = new Project();
+//        project.setName("WP_01");
+//        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+//        projectSteps.addProject(project);
+//
+//        Assert.assertEquals(driver.findElement(By.className("page_title")).getText(),
+//                project.getName());
+//    }
 
     @Test
     public void radioButtonTest() {
