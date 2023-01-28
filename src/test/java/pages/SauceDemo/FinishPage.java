@@ -8,8 +8,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class FinishPage extends BasePage {
 //    private final By finishLogoLocator = By.className("pony_express");
-    @FindBy(className = "pony_express")
-    public WebElement finishLogo;
+    @FindBy(id = "back-to-products")
+    public WebElement finishButton;
 
     public FinishPage(WebDriver driver) {
         super(driver);
@@ -21,7 +21,7 @@ public class FinishPage extends BasePage {
     }
 
     public boolean isFinishPageOpened(){
-        return finishLogo.isDisplayed();
+        return finishButton.isDisplayed();
     }
 
 

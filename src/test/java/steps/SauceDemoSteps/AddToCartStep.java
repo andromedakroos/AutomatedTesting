@@ -9,6 +9,7 @@ import pages.SauceDemo.InventoryPage;
 import pages.SauceDemo.SauceDemoLoginPage;
 
 public class AddToCartStep extends BaseStep {
+    private CheckoutStep checkoutStep;
     private InventoryPage inventoryPage;
     private CartPage cartPage;
     private CheckoutYourInformation checkoutYourInformation;
@@ -17,16 +18,18 @@ public class AddToCartStep extends BaseStep {
         inventoryPage = new InventoryPage(driver);
         cartPage = new CartPage(driver);
         checkoutYourInformation = new CheckoutYourInformation(driver);
+        checkoutStep = new CheckoutStep(driver);
     }
     private void goToCheckout(){
         cartPage.getCheckoutButtonLocator().click();
         checkoutYourInformation.getPageIdentifierByElement().isDisplayed();
     }
     @Step
-    public void addAndGoToCheckout(){
+    public CheckoutStep addAndGoToCheckout(){
         inventoryPage.getAddToCartButtonLocator().click();
         inventoryPage.getCartButtonLocator().click();
         cartPage.isPageOpened();
         goToCheckout();
+        return checkoutStep;
     }
 }
