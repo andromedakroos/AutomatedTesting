@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class FinishPage extends BasePage {
-//    private final By finishLogoLocator = By.className("pony_express");
     @FindBy(id = "back-to-products")
     public WebElement finishButton;
 
