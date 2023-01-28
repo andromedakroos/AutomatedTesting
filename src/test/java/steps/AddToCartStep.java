@@ -1,12 +1,11 @@
-package steps.SauceDemoSteps;
+package steps;
 
 import baseEntities.BaseStep;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import pages.SauceDemo.CartPage;
-import pages.SauceDemo.CheckoutYourInformation;
-import pages.SauceDemo.InventoryPage;
-import pages.SauceDemo.SauceDemoLoginPage;
+import pages.CartPage;
+import pages.CheckoutYourInformation;
+import pages.InventoryPage;
 
 public class AddToCartStep extends BaseStep {
     private CheckoutStep checkoutStep;

@@ -1,10 +1,11 @@
-package steps.SauceDemoSteps;
+package steps;
 
 import baseEntities.BaseStep;
-import baseEntities.BaseTest;
 import io.qameta.allure.Step;
+import models.User;
 import org.openqa.selenium.WebDriver;
-import pages.SauceDemo.*;
+import pages.InventoryPage;
+import pages.SauceDemoLoginPage;
 
 public class LoginStep extends BaseStep {
     private SauceDemoLoginPage sauceDemoLoginPage;
@@ -18,9 +19,9 @@ public class LoginStep extends BaseStep {
         addToCartStep = new AddToCartStep(driver);
     }
     @Step
-    public AddToCartStep login(String username, String password){
-        sauceDemoLoginPage.getUsernameInput().sendKeys(username);
-        sauceDemoLoginPage.getPasswordInput().sendKeys(password);
+    public AddToCartStep login(User user){
+        sauceDemoLoginPage.getUsernameInput().sendKeys(user.getUsername());
+        sauceDemoLoginPage.getPasswordInput().sendKeys(user.getPassword());
         sauceDemoLoginPage.getLogInButton().click();
         inventoryPage.isPageOpened();
         return addToCartStep;

@@ -2,20 +2,15 @@ package tests;
 
 import baseEntities.BaseTest;
 import io.qameta.allure.Attachment;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SauceDemoTest extends BaseTest {
     @Test(description = "Sauce demo end 2 end test")
     public void sauceDemoE2ETest(){
-        Assert.assertTrue(loginStep.login("standard_user","secret_sauce")
+        Assert.assertTrue(loginStep.login(user)
                 .addAndGoToCheckout()
-                .checkout("Andrew", "Moroz", "30-605").isFinishPageOpened());
+                .checkout(user).isFinishPageOpened());
     }
-    @Test(description = "Sauce demo failed test")
-    @Attachment(value = "screenshot", type = "image/png")
-    public void sauceDemoFailedLoginTest(){
-        loginStep.login("1233", "1222");
-    }
-
 }
