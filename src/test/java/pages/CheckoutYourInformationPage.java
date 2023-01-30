@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutYourInformationPage extends BasePage {
+
     @FindBy(id = "continue")
     public WebElement continueButton;
     @FindBy(id = "first-name")
@@ -19,6 +20,7 @@ public class CheckoutYourInformationPage extends BasePage {
 
     public CheckoutYourInformationPage(WebDriver driver) {
         super(driver);
+        logger.info("Using the CheckoutYourInformationPage class in which the PageFactory pattern is implemented");
     }
 
     @Override

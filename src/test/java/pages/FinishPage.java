@@ -12,6 +12,7 @@ public class FinishPage extends BasePage {
 
     public FinishPage(WebDriver driver) {
         super(driver);
+        logger.info("Using the FinishPage class in which the PageFactory pattern is implemented");
     }
 
     @Override

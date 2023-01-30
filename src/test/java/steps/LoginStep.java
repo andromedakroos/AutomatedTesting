@@ -3,6 +3,8 @@ package steps;
 import baseEntities.BaseStep;
 import io.qameta.allure.Step;
 import models.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import pages.InventoryPage;
 import pages.LoginPage;
@@ -20,6 +22,7 @@ public class LoginStep extends BaseStep {
     }
     @Step
     public AddToCartStep login(User user){
+        logger.info("In step LoginStep User object is using, which contains fields: " + user);
         sauceDemoLoginPage.getUsernameInput().sendKeys(user.getUsername());
         sauceDemoLoginPage.getPasswordInput().sendKeys(user.getPassword());
         sauceDemoLoginPage.getLogInButton().click();
