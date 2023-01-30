@@ -1,21 +1,19 @@
 package pages;
 
 import baseEntities.BasePage;
-import elements.UIElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
-    // Блок описания локаторов для эментов
-    private final By errorTextLocator = By.className("error-text");
-    private final By emailInputLocator = By.id("name");
-    private final By passwordInputLocator = By.id("password");
-    private final By logInButtonLocator = By.id("button_primary");
+    private final By usernameLocator = By.id("user-name");
+    private final By passwordLocator = By.id("password");
+    private final By logInButtonLocator = By.id("login-button");
+    private final static String pagePath = "https://www.saucedemo.com/";
 
-    // Блок иницализации страницы
     public LoginPage(WebDriver driver) {
         super(driver);
+        openPageByUrl();
     }
 
     @Override
@@ -23,11 +21,17 @@ public class LoginPage extends BasePage {
         return logInButtonLocator;
     }
 
-    // Блок атомарных методов
-    public WebElement getEmailInput() { return new UIElement(driver, emailInputLocator);}
-    public WebElement getPassword() { return new UIElement(driver, passwordInputLocator);}
-    public UIElement getLogInButton() { return new UIElement(driver, logInButtonLocator);}
-    public WebElement getErrorTextElement() { return new UIElement(driver, errorTextLocator); }
+    public void openPageByUrl() {
+        super.openPageByUrl(pagePath);
+    }
 
-
+    public WebElement getUsernameInput() {
+        return driver.findElement(usernameLocator);
+    }
+    public WebElement getPasswordInput() {
+        return driver.findElement(passwordLocator);
+    }
+    public WebElement getLogInButton() {
+        return driver.findElement(logInButtonLocator);
+    }
 }
