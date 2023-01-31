@@ -19,4 +19,8 @@ public class DashBoardPage extends BasePage {
     public void openPageByUrl(){
         super.openPageByUrl(pagePath);
     }
+
+    public String getTitle(){
+        return waitsService.waitForVisibilityBy(headerTittleLabelLocator).getText();
+    }
 }
