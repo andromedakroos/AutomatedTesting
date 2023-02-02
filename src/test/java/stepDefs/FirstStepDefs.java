@@ -1,5 +1,6 @@
 package stepDefs;
 
+import baseEntities.BaseCucumberTest;
 import configuration.ReadProperties;
 import factory.BrowserFactory;
 import io.cucumber.java.After;
@@ -11,10 +12,15 @@ import pages.DashBoardPage;
 import pages.LoginPage;
 import steps.UserStep;
 
-public class FirstStepDefs {
-    private WebDriver driver;
+public class FirstStepDefs extends BaseCucumberTest {
+    private BaseCucumberTest baseCucumberTest;
     private LoginPage loginPage;
     private DashBoardPage dashBoardPage;
+
+    public FirstStepDefs(BaseCucumberTest baseCucumberTest) {
+        this.baseCucumberTest = baseCucumberTest;
+    }
+
     @Given("открыт браузер")
     public void startBrowser() {
         driver = new BrowserFactory().getDriver();
