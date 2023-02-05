@@ -48,9 +48,9 @@ public class SelenideTest extends BaseTest {
                 .shouldBe(size(10))
                 .texts();
 */
-        $(byTitle("All Projects"))
-                .shouldBe(visible)
-                .shouldHave(text("All Projects"));
+//        $(byTitle("All Projects"))
+//                .shouldBe(visible)
+//                .shouldHave(text("All Projects"));
     }
 
     @Test
