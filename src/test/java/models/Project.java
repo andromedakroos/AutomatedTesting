@@ -1,12 +1,19 @@
 package models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Objects;
 
 public class Project {
+    @SerializedName(value = "name")
     private String name;
     private String description;
+    @SerializedName(value = "suite_mode")
     private  int type;
+    @SerializedName(value = "show_announcement")
     private boolean showAnnouncement;
+    @Expose
     private boolean deleted;
 
     @Override
