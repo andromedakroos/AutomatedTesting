@@ -1,71 +1,40 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import lombok.*;
+import org.testng.annotations.Test;
+
+@Builder
+@EqualsAndHashCode
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
-    private String firstName;
-    private String lastName;
+    @Expose
+    private String name;
+    @EqualsAndHashCode.Exclude
+    private int id;
+    @Expose
     private String email;
     private String password;
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public static class Builder{
-        private User newUser;
-
-        public Builder(){
-            newUser = new User();
-        }
-
-        public Builder withEmail(String value){
-            newUser.email = value;
-            return this;
-        }
-        public Builder withFirstName(String value){
-            newUser.firstName = value;
-            return this;
-        }
-        public Builder withLastName(String value){
-            newUser.lastName = value;
-            return this;
-        }
-        public Builder withPassword(String value){
-            newUser.password = value;
-            return this;
-        }
-
-        public User build(){
-            return newUser;
-        }
-
-
-    }
+    @Expose
+    @SerializedName("is_active")
+    @JsonProperty("is_active")
+    private boolean isActive;
+    @Expose
+    @SerializedName("is_admin")
+    private boolean isAdmin;
+    @Expose
+    @SerializedName("role_id")
+    private int roleId;
+    @Expose
+    private String role;
+    @EqualsAndHashCode.Exclude
+    @SerializedName("email_notifications")
+    private String emailNotifications;
 }

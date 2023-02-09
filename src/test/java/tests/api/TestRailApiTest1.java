@@ -2,16 +2,21 @@ package tests.api;
 
 import baseEntities.BaseApiTest;
 import io.restassured.mapper.ObjectMapperType;
+import io.restassured.response.Response;
 import models.Project;
 import org.apache.http.HttpStatus;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class TestRailApiTest1 extends BaseApiTest {
+    private int projectId;
+    Project expectedProject;
     @Test
     public void addProject() {
         String endpoint = "index.php?/api/v2/add_project";
@@ -81,4 +86,75 @@ public class TestRailApiTest1 extends BaseApiTest {
                 .log().body()
                 .statusCode(HttpStatus.SC_OK);
     }
+
+    @Test
+    public void addProject4() {
+        String endpoint = "index.php?/api/v2/add_project";
+
+        Project expectedProject = new Project();
+        expectedProject.setName("WP_Project_04");
+        expectedProject.setType(1);
+        expectedProject.setDescription("This is a description!!!");
+        expectedProject.setShowAnnouncement(true);
+
+       int projectId = given()
+                .body(expectedProject, ObjectMapperType.GSON)
+                .when()
+                .post(endpoint)
+                .then()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK)
+                .extract()
+                .jsonPath()
+                .getInt("id");
+
+        System.out.println(projectId);
+    }
+
+    @Test
+    public void addProject5() {
+        String endpoint = "index.php?/api/v2/add_project";
+
+        expectedProject = new Project();
+        expectedProject.setName("WP_Project_505");
+        expectedProject.setType(1);
+        expectedProject.setDescription("This is a description!!!");
+        expectedProject.setShowAnnouncement(true);
+
+        Response response = given()
+                .body(expectedProject, ObjectMapperType.GSON)
+                .when()
+                .post(endpoint)
+                .then()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK)
+                .extract()
+                .response();
+
+        projectId = response.getBody().jsonPath().getInt("id");
+        Assert.assertEquals(response.getBody().jsonPath().getString("name"), expectedProject.getName());
+
+        System.out.println(projectId);
+        System.out.println(expectedProject.getName());
+    }
+
+    @Test(dependsOnMethods = "addProject5")
+    public void readProject(){
+        String endpoint = "index.php?/api/v2/get_project/{project_id}";
+
+        Response response = given()
+                .pathParams("project_id", projectId)
+                .log().body()
+                .when()
+                .get(endpoint)
+                .then()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK)
+                .body("id", equalTo(projectId))
+                .body("name", is(expectedProject.getName()))
+                .extract()
+                .response();
+
+    }
+
 }

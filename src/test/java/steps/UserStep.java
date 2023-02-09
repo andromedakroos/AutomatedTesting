@@ -1,8 +1,7 @@
 package steps;
 
 import baseEntities.BaseStep;
-import io.qameta.allure.Step;
-import models.User;
+import models.UserGUI;
 import org.openqa.selenium.WebDriver;
 import pages.DashBoardPage;
 import pages.LoginPage;
@@ -26,7 +25,7 @@ public class UserStep extends BaseStep {
         return new DashBoardPage(driver);
     }
 
-    public DashBoardPage loginSuccessful(User user){
+    public DashBoardPage loginSuccessful(UserGUI user){
        return loginSuccessful(user.getEmail(),user.getPassword());
     }
 

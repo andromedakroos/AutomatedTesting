@@ -1,30 +1,19 @@
 package tests.gui;
 
 import baseEntities.BaseTest;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import configuration.ReadProperties;
-import factory.BrowserFactory;
 import io.qameta.allure.*;
-import models.Project;
-import models.User;
-import org.bouncycastle.dvcs.DVCSRequestInfo;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import models.UserGUI;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.DashBoardPage;
-import pages.LoginPage;
 import pages.project.AddProjectPage;
 import steps.NavigationSteps;
-import steps.UserStep;
 
 public class  LogInTest extends BaseTest {
 
     @Test
     public void loginSuccessfulTest(){
-        User user = new User.Builder()
+        UserGUI user = new UserGUI.Builder()
                 .withEmail(ReadProperties.username())
                 .withPassword(ReadProperties.password())
                 .build();
