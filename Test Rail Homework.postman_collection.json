@@ -60,17 +60,43 @@
 		{
 			"name": "Update milestone",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Qwertyu_1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "atrostyanko@gmail.com",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_started\": true,\r\n    \"is_completed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{base_url}}index.php?/api/v2/update_milestone/{milestone_id}",
+					"raw": "{{base_url}}/index.php?/api/v2/update_milestone/{{milestone_id}}",
 					"host": [
-						"{{base_url}}index",
-						"php"
+						"{{base_url}}"
+					],
+					"path": [
+						"index.php"
 					],
 					"query": [
 						{
-							"key": "/api/v2/update_milestone/{milestone_id}",
+							"key": "/api/v2/update_milestone/{{milestone_id}}",
 							"value": null
 						}
 					]
@@ -81,8 +107,38 @@
 		{
 			"name": "Get milestone",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Qwertyu_1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "atrostyanko@gmail.com",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/index.php?/api/v2/get_milestones/{{project_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "/api/v2/get_milestones/{{project_id}}",
+							"value": null
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -113,7 +169,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{base_url}}/index.php?/api/v2/delete_milestone/72",
+					"raw": "{{base_url}}/index.php?/api/v2/delete_milestone/{{milestone_id}}",
 					"host": [
 						"{{base_url}}"
 					],
@@ -122,7 +178,7 @@
 					],
 					"query": [
 						{
-							"key": "/api/v2/delete_milestone/72",
+							"key": "/api/v2/delete_milestone/{{milestone_id}}",
 							"value": null
 						}
 					]
