@@ -1,6 +1,6 @@
 package steps;
 
-import baseEntities.BaseStep;
+
 import io.qameta.allure.Step;
 import models.User;
 import org.openqa.selenium.WebDriver;

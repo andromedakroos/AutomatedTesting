@@ -1,6 +1,6 @@
 package pages;
 
-import baseEntities.BasePage;
+
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,15 +13,6 @@ public class SauceDemoLoginPage{
     private  By usernameLocator = By.id("user-name");
     private  By passwordLocator = By.id("password");
     private  By logInButtonLocator = By.id("login-button");
-//    private final static String pagePath = "https://www.saucedemo.com/";
-
-//    public SauceDemoLoginPage() {
-//        openPageByUrl();
-//    }
-//
-//    public void openPageByUrl() {
-//        open(pagePath);
-//    }
 
     public SelenideElement getUsernameInput() {
         return $(usernameLocator).shouldBe(visible);

@@ -1,6 +1,6 @@
 package pages;
 
-import baseEntities.BasePage;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -12,13 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CartPage {
-
-//    private final static String pagePath = "cart.html";
     private final By checkoutButtonLocator = By.id("checkout");
-
-//    public void openPageByUrl(){
-//        open(pagePath);
-//    }
     public SelenideElement getCheckoutButtonLocator() {
         return $(checkoutButtonLocator).shouldBe(visible);
     }
