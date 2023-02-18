@@ -1,11 +1,10 @@
-package steps;
+package steps.project;
 
 import baseEntities.BaseStep;
-import io.qameta.allure.Step;
 import models.User;
 import org.openqa.selenium.WebDriver;
-import pages.DashBoardPage;
-import pages.LoginPage;
+import pages.project.DashBoardPage;
+import pages.project.LoginPage;
 
 public class UserStep extends BaseStep {
     private LoginPage loginPage;

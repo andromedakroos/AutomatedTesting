@@ -1,24 +1,13 @@
 package tests;
 
 import baseEntities.BaseTest;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import configuration.ReadProperties;
-import factory.BrowserFactory;
 import io.qameta.allure.*;
-import models.Project;
 import models.User;
-import org.bouncycastle.dvcs.DVCSRequestInfo;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.DashBoardPage;
-import pages.LoginPage;
 import pages.project.AddProjectPage;
-import steps.NavigationSteps;
-import steps.UserStep;
+import steps.project.NavigationSteps;
 
 public class  LogInTest extends BaseTest {
 

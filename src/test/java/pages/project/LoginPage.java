@@ -1,4 +1,4 @@
-package pages;
+package pages.project;
 
 import baseEntities.BasePage;
 import elements.UIElement;

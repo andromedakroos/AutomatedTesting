@@ -5,12 +5,10 @@ import configuration.ReadProperties;
 import factory.BrowserFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.Browser;
 import org.testng.Assert;
-import pages.DashBoardPage;
-import pages.LoginPage;
-import steps.UserStep;
+import pages.project.DashBoardPage;
+import pages.project.LoginPage;
+import steps.project.UserStep;
 
 public class FirstStepDefs extends BaseCucumberTest {
     private BaseCucumberTest baseCucumberTest;

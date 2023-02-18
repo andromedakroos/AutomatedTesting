@@ -1,4 +1,4 @@
-package steps;
+package steps.project;
 
 import baseEntities.BaseStep;
 import models.Project;

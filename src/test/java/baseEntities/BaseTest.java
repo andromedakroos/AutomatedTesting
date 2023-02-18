@@ -7,8 +7,8 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import services.WaitsService;
-import steps.ProjectSteps;
-import steps.UserStep;
+import steps.project.ProjectSteps;
+import steps.project.UserStep;
 
 public class BaseTest {
     protected WebDriver driver;
