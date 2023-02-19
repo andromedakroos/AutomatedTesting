@@ -20,10 +20,9 @@ public class BaseApiGSONTest {
                 .create();
 
         RestAssured.baseURI = ReadProperties.getUrl();
+
         RestAssured.requestSpecification = given()
                 .header(HTTP.CONTENT_TYPE, ContentType.JSON)
                 .auth().preemptive().basic(ReadProperties.username(), ReadProperties.password());
     }
-
-
 }

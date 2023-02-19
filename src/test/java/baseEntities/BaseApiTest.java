@@ -16,6 +16,4 @@ public class BaseApiTest {
                 .header(HTTP.CONTENT_TYPE, ContentType.JSON)
                 .auth().preemptive().basic(ReadProperties.username(), ReadProperties.password());
     }
-
-
 }
