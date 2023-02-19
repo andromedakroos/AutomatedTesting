@@ -19,16 +19,15 @@ public class AddToCartStep extends BaseStep {
         checkoutYourInformation = new CheckoutYourInformation(driver);
         checkoutStep = new CheckoutStep(driver);
     }
-    private void goToCheckout(){
+    public CheckoutStep goToCheckout(){
         cartPage.getCheckoutButtonLocator().click();
-        checkoutYourInformation.getPageIdentifierByElement().isDisplayed();
+//        checkoutYourInformation.getPageIdentifierByElement().isDisplayed();
+        return checkoutStep;
     }
     @Step
-    public CheckoutStep addAndGoToCheckout(){
+    public void addItemToTheCart(){
         inventoryPage.getAddToCartButtonLocator().click();
         inventoryPage.getCartButtonLocator().click();
         cartPage.isPageOpened();
-        goToCheckout();
-        return checkoutStep;
     }
 }

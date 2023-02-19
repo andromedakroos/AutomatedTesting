@@ -26,14 +26,15 @@ public class CheckoutStep extends BaseStep {
         checkoutYourInformation.continueButton.click();
         checkoutOverview.isPageOpened();
     }
-    public void checkoutOverview() {
+    public FinishPage checkoutOverview() {
         checkoutOverview.getFinishButtonLocator().click();
-        finishPage.isFinishPageOpened();
-    }
-    @Step
-    public FinishPage checkout(String name, String lastname, String zipcode) {
-        checkoutYourInformation(name, lastname, zipcode);
-        checkoutOverview();
+//        finishPage.isFinishPageOpened();
         return finishPage;
     }
+//    @Step
+//    public FinishPage checkout(String name, String lastname, String zipcode) {
+//        checkoutYourInformation(name, lastname, zipcode);
+//        checkoutOverview();
+//        return finishPage;
+//    }
 }
