@@ -21,7 +21,6 @@ public class AddToCartStep extends BaseStep {
     }
     public CheckoutStep goToCheckout(){
         cartPage.getCheckoutButtonLocator().click();
-//        checkoutYourInformation.getPageIdentifierByElement().isDisplayed();
         return checkoutStep;
     }
     @Step

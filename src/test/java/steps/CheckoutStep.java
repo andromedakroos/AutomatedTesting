@@ -28,13 +28,6 @@ public class CheckoutStep extends BaseStep {
     }
     public FinishPage checkoutOverview() {
         checkoutOverview.getFinishButtonLocator().click();
-//        finishPage.isFinishPageOpened();
         return finishPage;
     }
-//    @Step
-//    public FinishPage checkout(String name, String lastname, String zipcode) {
-//        checkoutYourInformation(name, lastname, zipcode);
-//        checkoutOverview();
-//        return finishPage;
-//    }
 }
